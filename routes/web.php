@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/companies', 'CompaniesController@index');
+Route::get('/company/{name}', 'CompaniesController@show');
+Route::get('/employees', 'EmployeesController@index');
