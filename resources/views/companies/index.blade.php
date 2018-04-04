@@ -14,7 +14,11 @@
                                     <td class="text-center">
                                         <img class="img-polaroid" src="{{asset('storage/companies_logo/'.$company->logo)}}" width="100">
                                     </td>
-                                    <td class="h5">{{$company->name}}</td>
+                                    <td class="h5">
+                                        <a href="{{ url('/company') }}/{{$company->name}}">
+                                            {{$company->name}}
+                                        </a>
+                                    </td>
                                     <td>
                                         <div>
                                             E-mail:
